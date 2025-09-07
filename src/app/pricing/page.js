@@ -1,4 +1,3 @@
-import Footer from '../../components/Footer';
 import { CheckCircle } from 'lucide-react';
 
 export default function PricingPage() {

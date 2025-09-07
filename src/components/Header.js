@@ -44,49 +44,43 @@ export default function Header() {
             <nav className="hidden md:flex space-x-6">
               <button 
                 onClick={() => router.push('/')}
-                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/' ? 'text-[#D4A017] after:w-full' : ''}`}
+                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/' ? 'text-[#D4A017] active' : ''}`}
               >
                 Home
               </button>
               <button 
                 onClick={() => router.push('/about')}
-                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/about' ? 'text-[#D4A017] after:w-full' : ''}`}
+                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/about' ? 'text-[#D4A017] active' : ''}`}
               >
                 About US
               </button>
               <button 
                 onClick={() => router.push('/pricing')}
-                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/pricing' ? 'text-[#D4A017] after:w-full' : ''}`}
+                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/pricing' ? 'text-[#D4A017] active' : ''}`}
               >
                 Pricing
               </button>
               <button 
                 onClick={() => router.push('/services')}
-                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/services' ? 'text-[#D4A017] after:w-full' : ''}`}
+                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/services' ? 'text-[#D4A017] active' : ''}`}
               >
                 Services
               </button>
               <button 
                 onClick={() => router.push('/features')}
-                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/features' ? 'text-[#D4A017] after:w-full' : ''}`}
+                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/features' ? 'text-[#D4A017] active' : ''}`}
               >
                 Features
               </button>
               <button 
-                onClick={() => router.push('/all')}
-                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/all' ? 'text-[#D4A017] after:w-full' : ''}`}
-              >
-                All
-              </button>
-              <button 
                 onClick={() => router.push('/apps')}
-                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/apps' ? 'text-[#D4A017] after:w-full' : ''}`}
+                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/apps' ? 'text-[#D4A017] active' : ''}`}
               >
                 Apps
               </button>
               <button 
                 onClick={() => router.push('/contact')}
-                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/contact' ? 'text-[#D4A017] after:w-full' : ''}`}
+                className={`nav-link text-gray-700 hover:text-[#D4A017] ${pathname === '/contact' ? 'text-[#D4A017] active' : ''}`}
               >
                 Contact
               </button>

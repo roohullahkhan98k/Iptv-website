@@ -229,6 +229,10 @@ body {
   color: var(--accent-color);
 }
 
+.nav-link.active {
+  color: #D4A017;
+}
+
 .nav-link::after {
   content: '';
   position: absolute;
