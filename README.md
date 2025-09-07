@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DJReklesz IPTV Website
+
+A modern, responsive IPTV service website built with Next.js and Tailwind CSS.
+
+## Project Structure
+
+### Pages
+- **Home** (`/`) - Hero section, stats, features, and services preview
+- **About** (`/about`) - Why choose us section
+- **Services** (`/services`) - What we offer
+- **Features** (`/features`) - All-in-one IPTV subscription details
+- **Pricing** (`/pricing`) - Subscription plans and pricing
+- **Contact** (`/contact`) - Contact information and support
+- **All** (`/all`) - Complete page with all sections (for users who want everything on one page)
+- **Apps** (`/apps`) - Application downloads and setup
+
+### Components
+- `Header.js` - Navigation header with responsive menu
+- `Hero.js` - Main hero section with call-to-action buttons
+- `Stats.js` - Statistics and numbers showcase
+- `Features.js` - Feature highlights grid
+- `Services.js` - Service offerings
+- `About.js` - Why choose us section
+- `Pricing.js` - Pricing plans and subscription options
+- `Contact.js` - Contact form and information
+- `Footer.js` - Site footer with company information
+- `FloatingAction.js` - Floating action button
+- `WhatsAppContact.js` - WhatsApp contact integration
+- `ThemeContext.js` - Theme management context
+
+## Features
+
+- **Responsive Design** - Works on all devices
+- **Modern UI/UX** - Clean, professional design with gold accent colors
+- **Component-Based Architecture** - Modular, reusable components
+- **Page-Based Navigation** - Separate pages for better SEO and user experience
+- **Interactive Elements** - Hover effects, animations, and smooth transitions
+- **WhatsApp Integration** - Direct contact through WhatsApp
+- **Theme Support** - Dark/light mode toggle
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 14** - React framework with App Router
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Icon library
+- **React Hooks** - State management and effects
 
-## Learn More
+## Navigation Structure
 
-To learn more about Next.js, take a look at the following resources:
+The website now uses proper page-based navigation instead of single-page scrolling:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Home** - Landing page with key sections
+- **About** - Company information and benefits
+- **Services** - Service offerings
+- **Features** - Feature highlights
+- **Pricing** - Subscription plans
+- **Contact** - Contact information
+- **All** - Complete single-page experience
+- **Apps** - Application downloads
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Styling
 
-## Deploy on Vercel
+The website uses a consistent color scheme:
+- Primary: Gold gradient (`#D4A017` to `#B8860B`)
+- Background: Black and dark grays
+- Text: White and light grays
+- Accents: Gold highlights and gradients
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Responsive Breakpoints
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Mobile: Default (320px+)
+- Tablet: `md:` (768px+)
+- Desktop: `lg:` (1024px+)
+- Large Desktop: `xl:` (1280px+)
