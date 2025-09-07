@@ -1,5 +1,7 @@
 'use client'
 import { useState } from 'react';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function PricingCard({ 
   image, 
@@ -22,38 +24,64 @@ export default function PricingCard({
   return (
     <div className="text-center mb-2">
       <div 
-        className="pricing-card rounded-lg relative overflow-hidden mx-auto cursor-pointer transition-all duration-300 border-2 border-gray-400 shadow-sm"
+        className="pricing-card rounded-lg relative overflow-hidden mx-auto cursor-pointer border border-transparent shadow-sm"
         style={{
-          backgroundImage: `url(${image})`, 
-          backgroundSize: 'contain', 
-          backgroundPosition: 'center', 
-          backgroundRepeat: 'no-repeat',
-          width: '350px', 
-          height: '350px'
+          width: '370px', 
+          height: '480px'
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
+        {/* Image area - full 370px width */}
+        <div className="w-full relative" style={{height: '350px'}}>
+          <Image
+            src={image}
+            alt={planName}
+            fill
+            className="object-contain"
+            sizes="370px"
+            priority
+          />
+        </div>
 
-         {/* Hover Overlay */}
-         {isHovered && (
-           <div className="absolute inset-0 bg-white bg-opacity-90 flex items-center justify-center z-10">
-             <div className="text-center">
-               <button 
-                 className={`px-8 py-3 rounded-lg font-bold text-white transition-all duration-300 ${colorClasses[color]} hover:opacity-90`}
-                 onClick={() => window.open(`https://wa.me/18606013469?text=Hello! I'm interested in the ${planName} (${price}). Can you provide more information?`, '_blank')}
-               >
-                 Buy
-               </button>
-             </div>
-           </div>
-         )}
-      </div>
-      
-      {/* Name and Price below card */}
-      <div className="mt-2 text-center">
-        <h3 className="text-lg font-bold mb-1 text-black">{planName}</h3>
-        <div className="text-lg font-bold gold-accent">{price}</div>
+        {/* Name and Price partition - more space */}
+        <motion.div 
+          className="p-6 text-center"
+          animate={{
+            y: isHovered ? -32 : 16
+          }}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut"
+          }}
+        >
+          <h3 className="text-lg mb-2 text-black">{planName}</h3>
+          <div className="text-lg text-black">{price}</div>
+        </motion.div>
+
+        {/* Full width button appears on hover */}
+        <AnimatePresence>
+          {isHovered && (
+            <motion.div 
+              className="absolute bottom-0 left-0 right-0"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 50, opacity: 0 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut"
+              }}
+            >
+              <button 
+                className="w-full py-2 font-bold text-white accent-button rounded-none"
+                style={{borderRadius: '0 0 8px 8px'}}
+                onClick={() => window.open(`https://wa.me/18606013469?text=Hello! I'm interested in the ${planName} (${price}). Can you provide more information?`, '_blank')}
+              >
+                Select
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

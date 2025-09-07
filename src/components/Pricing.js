@@ -13,8 +13,8 @@ export default function Pricing() {
           </p>
         </div>
         
-        {/* Pricing Plans */}
-        <div className="grid md:grid-cols-3 gap- mb-8">
+        {/* All Pricing Plans */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           <PricingCard 
             image="/assets/1.jpg"
             planName="BASIC PLAN"
@@ -36,13 +36,7 @@ export default function Pricing() {
             price="£219.90"
             color="red"
           />
-        </div>
-
-        {/* Border between rows */}
-        <div className="border-t border-gray-300 mb-8"></div>
-
-        {/* Additional Pricing Plans */}
-        <div className="grid md:grid-cols-3 gap-0">
+          
           <PricingCard 
             image="/assets/4.jpg"
             planName="STARTER PLAN"
